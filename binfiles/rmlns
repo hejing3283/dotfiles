@@ -1,0 +1,10 @@
+#!/bin/bash
+#By: J.He
+# remove all soft links for give dir
+
+find $1 -lname '*' -exec ls {} \;
+
+find $1 -maxdepth 1 -lname '*' -exec rm {} \;
+echo "all softlink in $1 deleted"
+
+

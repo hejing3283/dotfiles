@@ -1,0 +1,30 @@
+#!/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python-2.7.5/python
+'''
+File: trfile
+Author:J.HE
+Description:transpose a tab delimited matrix file 
+Input: 
+Output: 
+'''
+import sys,getopt
+argv = sys.argv[1:]
+if len(argv) == 2:
+    input = argv[0]; output = argv[1]
+elif len(argv) == 1:
+    input = argv[0]
+    output = ''
+
+with open(input) as f:
+    lis=[x.split() for x in f]
+if output:
+    outputH = open(output,'w')
+    for x in zip(*lis):
+        for y in x:
+            outputH.write(y+'\t')
+        outputH.write("\n")
+    outputH.close()
+else:
+    for x in zip(*lis):
+        for y in x:
+            print(y+'\t')
+# print "#---transpose---DONE---"

@@ -1,0 +1,7 @@
+#!/bin/bash
+#By: J.He
+#TODO: 
+f=$1
+n=$2
+awk -v n=$n -v f=$f 'NR%n==1{x=f"_"++i;}{print > x}' $1
+

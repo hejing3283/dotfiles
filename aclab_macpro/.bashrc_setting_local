@@ -1,0 +1,62 @@
+
+echo " ********** ** **********     **     ****     ** "
+echo "/////**/// /**/////**///     ****   /**/**   /** "
+echo "    /**    /**    /**       **//**  /**//**  /** "
+echo "    /**    /**    /**      **  //** /** //** /** "
+echo "    /**    /**    /**     **********/**  //**/** "
+echo "    /**    /**    /**    /**//////**/**   //**** "
+echo "    /**    /**    /**    /**     /**/**    //*** "
+echo "    //     //     //     //      // //      ///  "
+
+PATH=$PATH:$HOME
+#PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/R/R-2.15.1/bin
+PATH=$PATH:/nfs/apps/perl/current/bin/
+PATH=$PATH:/nfs/apps/matlab/current/bin/
+PATH=$PATH:/nfs/apps/java/current/bin/
+PATH=$PATH:/nfs/apps/R/2.15.1/bin/
+PATH=$PATH:/nfs/apps/python/2.7.2/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/cghub/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/muTect/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/GenomeAnalysisTK-2.4-9-g532efad/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/scripts/school/compGenomics/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/bin/
+
+alias python='/nfs/apps/python/2.6.5/bin/python';
+
+
+export PERL5LIB=/ifs/home/c2b2/ac_lab/jh3283/tools/vcftools_0.1.10/perl
+
+
+DBSNPMODEL=/ifs/scratch/c2b2/ac_lab/jh3283/ref/DBSNPCommonSNPsbedfiles/dbSNP135commonCHR.txt
+export DBSNPMODEL
+REF=/ifs/data/c2b2/ngs_lab/ngs/resources/bwa_samtools_gatk_DB/human_g1k_v37.fasta
+export REF
+
+REFDBSNP=/ifs/data/c2b2/ngs_lab/ngs/resources/bwa_samtools_gatk_DB/dbsnp_132.b37.vcf
+export REFDBSNP
+
+MAKEPILEUP=/ifs/home/c2b2/ac_lab/jh3283/scripts/projNET/BAFpipeline/make_pileup.sh
+export MAKEPILEUP
+
+PILEUPTOFREQPY=/ifs/home/c2b2/ac_lab/jh3283/scripts/projNET/BAFpipeline/pileup_to_freq.py
+export PILEUPTOFREQPY
+
+NETDIR=/ifs/scratch/c2b2/ac_lab/jh3283/net/
+export NETDIR
+
+SCRIPTS=/ifs/home/c2b2/ac_lab/jh3283/scripts/
+export SCRIPTS
+
+ANNOVAR=/ifs/scratch/c2b2/ngs_lab/sz2317/softwares/annovar/
+export ANNOVAR
+
+PANDIR=/ifs/home/c2b2/ac_lab/jh3283/SCRATCH/projPanCancer/compRegul/
+export PANDIR
+
+
+#------ Matlab
+MATLABROOT=/nfs/apps/matlab/current
+export MATLABROOT
+
+REFAML=/ifs/scratch/c2b2/ac_lab/jh3283/ref/GRCh37-lite.fa
+export REFAML

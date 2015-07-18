@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/ifs/home/c2b2/ac_lab/jh3283/tools'
+let g:netrw_dirhist_2='/ifs/home/c2b2/ac_lab/jh3283/tools/Rio'
+let g:netrw_dirhist_3='/ifs/home/c2b2/ac_lab/jh3283/tools'
+let g:netrw_dirhist_4='/ifs/home/c2b2/ac_lab/jh3283/scripts/projAML/WXS'
+let g:netrw_dirhist_5='/ifs/home/c2b2/ac_lab/jh3283/tools/mutable'
+let g:netrw_dirhist_6='/ifs/home/c2b2/ac_lab/jh3283/tools'
+let g:netrw_dirhist_7='/ifs/home/c2b2/ac_lab/jh3283/.vim'

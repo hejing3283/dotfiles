@@ -1,0 +1,8 @@
+#!/bin/bash
+#By: J.He
+#TODO:  open files in excel
+
+for f in "$@" 
+do
+  open $f -a 'Microsoft Excel'
+done

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+awk '{if(NR==1) {print "\033[1;31m"$0"\033[0m"} else {print $0}}'
+

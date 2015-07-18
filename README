@@ -1,0 +1,12 @@
+README
+--------
+
+* binfiles updated through binfiles branch, every system
+* c2b2_cluster updated throught c2b2_cluster branch only through c2b2 cluster
+* aclab_macpro updated throught c2b2 macpro computer locally 
+
+git pull git@gitlab.com:moonhj00/dotfiles.git
+
+git push 
+git push --set-upstream origin master
+git remote add origin https://gitlab.com/moonhj00/dotfiles.git

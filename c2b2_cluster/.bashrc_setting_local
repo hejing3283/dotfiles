@@ -1,0 +1,101 @@
+echo " ********** ** **********     **     ****     ** "
+echo "/////**/// /**/////**///     ****   /**/**   /** "
+echo "    /**    /**    /**       **//**  /**//**  /** "
+echo "    /**    /**    /**      **  //** /** //** /** "
+echo "    /**    /**    /**     **********/**  //**/** "
+echo "    /**    /**    /**    /**//////**/**   //**** "
+echo "    /**    /**    /**    /**     /**/**    //*** "
+echo "    //     //     //     //      // //      ///  "
+
+PATH=$PATH:$HOME
+#PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/R/R-2.15.1/bin
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/perl/perl-5.18.2/bin/
+# PATH=$PATH:/nfs/apps/perl/current/bin/
+PATH=$PATH:/nfs/apps/matlab/current/bin/
+#PATH=$PATH:/nfs/apps/R/2.15.1/bin/
+#PATH=$PATH:/nfs/apps/python/2.7.2/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python_current/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/R/R_current/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/R/R-3-02/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/cghub/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/muTect/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/GenomeAnalysisTK-2.4-9-g532efad/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/bin/
+PATH=$PATH:/ifs/scratch/c2b2/ys_lab/el2622/software/pseq/protobuf-2.4.1/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/git/git-current/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/vcftools/vcftools_current/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python_current/bin/
+PATH=$PATH:/ifs/home/c2b2/ac_lab/jh3283/tools/bedtools-2.17.0/bin/ 
+#alias python='/nfs/apps/python/2.6.5/bin/python';
+export PYTHONPATH=$PYTHONPARH:/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python-2.7.5/lib/python2.7/site-packages
+
+alias python='/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python_current/python'
+
+export PERL5LIB=/ifs/home/c2b2/ac_lab/jh3283/tools/vcftools/vcftools_0.1.10/perl
+
+
+DBSNPMODEL=/ifs/scratch/c2b2/ac_lab/jh3283/ref/DBSNPCommonSNPsbedfiles/dbSNP135commonCHR.txt
+export DBSNPMODEL
+REF=/ifs/data/c2b2/ngs_lab/ngs/resources/bwa_samtools_gatk_DB/human_g1k_v37.fasta
+export REF
+
+REFDBSNP=/ifs/data/c2b2/ngs_lab/ngs/resources/bwa_samtools_gatk_DB/dbsnp_132.b37.vcf
+export REFDBSNP
+
+MAKEPILEUP=/ifs/home/c2b2/ac_lab/jh3283/scripts/projNET/BAFpipeline/make_pileup.sh
+export MAKEPILEUP
+
+PILEUPTOFREQPY=/ifs/home/c2b2/ac_lab/jh3283/scripts/projNET/BAFpipeline/pileup_to_freq.py
+export PILEUPTOFREQPY
+
+NETDIR=/ifs/scratch/c2b2/ac_lab/jh3283/net/
+export NETDIR
+
+SCRIPTS=/ifs/home/c2b2/ac_lab/jh3283/scripts/
+export SCRIPTS
+
+#ANNOVAR=/ifs/data/c2b2/ngs_lab/ngs/usr/Annovar/annovar
+ANNOVAR=/ifs/scratch/c2b2/ngs_lab/sz2317/softwares/annovar/
+export ANNOVAR
+
+PANDIR=/ifs/home/c2b2/ac_lab/jh3283/SCRATCH/projPanCancer/compRegul/
+export PANDIR
+
+
+#------ Matlab
+MATLABROOT=/nfs/apps/matlab/current
+export MATLABROOT
+
+REFAML=/ifs/scratch/c2b2/ac_lab/jh3283/ref/GRCh37-lite.fa
+export REFAML
+
+#export JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java
+export JAVA_HOME=/nfs/apps/java/1.6.0_13/jre/bin/java
+export PATH=$PATH:/nfs/apps/java/1.6.0_13/jre/bin
+
+RHOME=/ifs/home/c2b2/ac_lab/jh3283/tools/R/R_current/
+export RHOME
+RHOMES=/ifs/home/c2b2/ac_lab/jh3283/tools/R/R-3-02/
+export RHOMES
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RHOMES/bin
+
+BTDIR=/ifs/home/c2b2/ac_lab/jh3283/tools/bedtools-2.17.0/bin/
+export BTDIR
+
+export frep=/ifs/data/c2b2/ac_lab/jh3283/projFocus/report/
+export fres=/ifs/data/c2b2/ac_lab/jh3283/projFocus/result/
+export fdata=/ifs/data/c2b2/ac_lab/jh3283/projFocus/data/
+export fo=/ifs/data/c2b2/ac_lab/jh3283/projFocus/other/
+export crnsc=/ifs/home/c2b2/ac_lab/jh3283/scripts/projFocus/ceRNA
+export crntfsc=/ifs/home/c2b2/ac_lab/jh3283/scripts/projFocus/tf
+export amlxsc=/ifs/home/c2b2/ac_lab/jh3283/scripts/projAML/WXS
+export vdata=/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/data/
+export vres=/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/result/
+export vrep=/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/report/
+export vo=/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/other/
+export vsc=/ifs/home/c2b2/ac_lab/jh3283/scripts/projVar/
+export pp=/ifs/data/c2b2/ac_lab/jh3283/projProteo/
+export spp=/ifs/home/c2b2/ac_lab/jh3283/scripts/projProteo/
+export ms=/ifs/data/c2b2/ac_lab/jh3283/projMisc/
+export sms=/ifs/home/c2b2/ac_lab/jh3283/scripts/projMisc/
+

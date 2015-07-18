@@ -1,0 +1,18 @@
+
+PATH=$PATH:$HOME
+
+export frep=/Volumes/ifs/data/c2b2/ac_lab/jh3283/projFocus/report/
+export fres=/Volumes/ifs/data/c2b2/ac_lab/jh3283/projFocus/result/
+export fdata=/Volumes/ifs/data/c2b2/ac_lab/jh3283/projFocus/data/
+export fo=/Volumes/ifs/data/c2b2/ac_lab/jh3283/projFocus/other/
+export crnsc=/Volumes/ifs/home/c2b2/ac_lab/jh3283/scripts/projFocus/ceRNA
+export crntfsc=/Volumes/ifs/home/c2b2/ac_lab/jh3283/scripts/projFocus/tf
+export amlxsc=/Volumes/ifs/home/c2b2/ac_lab/jh3283/scripts/projAML/WXS
+export vdata=/Volumes/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/data/
+export vres=/Volumes/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/result/
+export vrep=/Volumes/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/report/
+export vo=/Volumes/ifs/home/c2b2/ac_lab/jh3283/DATA/projMisc/varReg/other/
+export vsc=/Volumes/ifs/home/c2b2/ac_lab/jh3283/scripts/projVar/
+export pp=/Volumes/ifs/data/c2b2/ac_lab/jh3283/projProteo/
+export spp=/Volumes/ifs/home/c2b2/ac_lab/jh3283/scripts/projProteo/
+

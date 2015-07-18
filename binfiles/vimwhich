@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+file=$(which $1 2>/dev/null)
+if [[ -f $file ]]; then
+  vim $file
+else
+  echo "file \"$1\" does not exist!"
+fi

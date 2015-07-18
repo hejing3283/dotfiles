@@ -1,0 +1,60 @@
+# library()
+snippet li
+	library(${1:})
+# If Condition
+snippet if
+	if(${1:condition}){
+	  ${2:}
+	}
+snippet el
+	else {
+	  ${1:}
+	}
+snippet wh
+	while(${1:condition}){
+	  ${2:}
+	}
+# For Loop
+snippet for
+	for(${1:i} in ${2:range}){
+	  ${3:}
+	}
+# Function
+snippet fun
+	${1:funname} <- function(${2:})
+	{
+	  ${3:}
+	}
+# repeat
+snippet re
+	repeat{
+	  ${2:}
+	  if(${1:condition}) break
+	}
+snippet rsp
+	#!/usr/bin/Rscript
+	#Author: J.He
+	#Date:${1} 
+	#TODO:${2}
+snippet argv
+	#### argv----
+	source(paste(rootd,"/scripts/projFocus/ceRNA/projFocusCernaFunctions.R",sep=""))
+	source(paste(rootd,"/scripts/myR/jingGraphic.R",sep=""))
+	args = getArgs()
+	if(length(args) < 1 || is.null(args)){
+	    print(paste(usage,example,sep="\n"))
+	    print(args)
+	    stop(paste(error,"wrong input parameter!"))
+	   }
+	setwd(system("pwd",intern=T))
+	${1}    = args[['${2}']] 
+	${3}    = args[['${4}']] 
+snippet setwd
+	### init-----
+	setRootd  = function(){
+	  sysInfo = Sys.info()
+	  if(sysInfo['sysname']=="Darwin" ){ rootd = "/Volumes/ifs/home/c2b2/ac_lab/jh3283/"
+	  }else if(sysInfo['sysname']=="Linux" ){ootd = "/ifs/home/c2b2/ac_lab/jh3283/" }
+	  return(rootd)}
+	rootd = setRootd()
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+#By: J.He
+#TODO: 
+
+qstat |awk -v a=$1 -v b=$2 '$1>=a&&$1<=b{print $1}'|xargs qdel
+

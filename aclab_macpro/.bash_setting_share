@@ -1,0 +1,183 @@
+# set prompt
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOC": forward-word'
+bind '"\eOD": backward-word'
+
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='Darwin'
+fi
+
+#Display
+
+if [[ $platform == 'Darwin' ]]; then
+   alias ls='ls -G'
+   alias ll='ls -G -lhtr'
+else
+    alias ls='ls --color=auto'
+	alias ll='ls -lhtr'
+	alias rip_color_code='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
+	alias rdlk="readlink -m"
+	alias vdir='ls --color=auto --format=long'
+fi
+
+alias l='ls -lh'
+alias la='ls -Al'                              # all but . and ..
+alias lat='ls -Altr'
+alias lm="ls -lh | awk '\$3==\"akl2140\"'"
+alias lst='ls -lh | sort -k1,1'
+alias lstr='ls -lthr'
+alias dir='ls --color=auto --format=vertical'
+alias diskspace="du -S | sort -n -r |more"
+alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
+
+alias rr='rm -r'
+alias viz='rowcount|colcount|colorizer'
+alias wai='readlink -m .'
+alias whereami='readlink -m .'
+alias df='df -h'
+alias du='du -h'
+
+#movement
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias avg="awk 'BEGIN{sum=0;line=0};{sum+=\$1;line+=1};END{print sum/line}'"
+alias viz='rowcount|colcount|colorizer'
+
+#space check
+alias diskspace="du -S | sort -n -r |more"
+
+#find
+alias fn="find . -name"
+
+alias grep='grep --color'                     # show differences in colour
+alias egrep='egrep --color=auto'              # show differences in colour
+alias fgrep='fgrep --color=auto'              # show differences in colour
+alias uniqc="uniq -c | sort -k2,2 | awk '{print $1\"\t\"$2}'"
+
+
+cd_func ()
+{
+  local x2 the_new_dir adir index
+  local -i cnt
+
+  if [[ $1 ==  "--" ]]; then
+    dirs -v
+    return 0
+  fi
+
+  the_new_dir=$1
+  [[ -z $1 ]] && the_new_dir=$HOME
+
+  if [[ ${the_new_dir:0:1} == '-' ]]; then
+    #
+    # Extract dir N from dirs
+    index=${the_new_dir:1}
+    [[ -z $index ]] && index=1
+    adir=$(dirs +$index)
+    [[ -z $adir ]] && return 1
+    the_new_dir=$adir
+  fi
+
+  #
+  # '~' has to be substituted by ${HOME}
+  [[ ${the_new_dir:0:1} == '~' ]] && the_new_dir="${HOME}${the_new_dir:1}"
+
+  #
+  # Now change to the new dir and add to the top of the stack
+  pushd "${the_new_dir}" > /dev/null
+  [[ $? -ne 0 ]] && return 1
+  the_new_dir=$(pwd)
+
+  #
+  # Trim down everything beyond 11th entry
+  popd -n +11 2>/dev/null 1>/dev/null
+
+  #
+  # Remove any other occurence of this dir, skipping the top of the stack
+  for ((cnt=1; cnt <= 10; cnt++)); do
+    x2=$(dirs +${cnt} 2>/dev/null)
+    [[ $? -ne 0 ]] && return 0
+    [[ ${x2:0:1} == '~' ]] && x2="${HOME}${x2:1}"
+    if [[ "${x2}" == "${the_new_dir}" ]]; then
+      popd -n +$cnt 2>/dev/null 1>/dev/null
+      cnt=cnt-1
+    fi
+  done
+
+  return 0
+}
+
+alias cd=cd_func
+
+#--------------------------------------------------
+extract () {
+   if [ -f $1 ] ; then
+       case $1 in
+           *.tar.bz2)   tar xvjf $1    ;;
+           *.tar.gz)    tar xvzf $1    ;;
+           *.bz2)       bunzip2 $1     ;;
+           *.rar)       unrar x $1       ;;
+           *.gz)        gunzip $1      ;;
+           *.tar)       tar xvf $1     ;;
+           *.tbz2)      tar xvjf $1    ;;
+           *.tgz)       tar xvzf $1    ;;
+           *.zip)       unzip $1       ;;
+           *.Z)         uncompress $1  ;;
+           *.7z)        7z x $1        ;;
+           *)           echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+ }
+
+#fawk
+ function fawk {
+      first="awk '{print "
+          last="}'"
+              cmd="${first}\$${1}${last}"
+                  eval $cmd
+}
+
+#up
+up(){
+    local d=""
+      limit=$1
+        for ((i=1 ; i <= limit ; i++))
+              do
+                      d=$d/..
+                          done
+                            d=$(echo $d | sed 's/^\///')
+                              if [ -z "$d" ]; then
+                                    d=..
+                                      fi
+                                        cd $d
+}
+
+#wiki
+wiki() { dig +short txt $1.wp.dg.cx; }
+
+
+ # a) function settitle
+settitle () 
+ { 
+ echo -ne "\e]2;$@\a\e]1;$@\a"; 
+}
+
+
+PS1="\[\e[0;35m\]<\[\e[1;35m\]$?|\!\[\e[0;35m\]>\[\e[32m\]\h:\[\e[1;34m\]\w\[\e[0;33m\]\$\[\e[0;39m\] "
+alias myqsum='qsum | "grep" "$USER\|int\|--\|total"'
+alias displayOffice='export DISPLAY=156.145.235.115:0.0'
+alias tawk="awk -F'\t' -v OFS='\t'"
+LS_COLORS='no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=01;40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.com=00;32:*.btm=00;32:*.bat=00;32:*.sh=00;32:*.csh=00;32:*.tar=00;31:*.tgz=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.jpg=00;35:*.gif=00;35:*.bmp=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:*.tiff=00;35:*.txt=00;33:*README*=00;33:*.m=01;36:*.mat=01;36:'
+shopt -s checkwinsize
+umask 0007
+PROMPT_DIRTRIM=4
+TERM=xterm

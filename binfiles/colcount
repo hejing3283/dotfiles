@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# use the fact a tab is 8 characters
+head -2 $1 | awk -F"\t" '{if (NR==1) { for (i=1; i<=NF; i++) {printf i; for (j=1; j<=int(length($i)/8); j++) {printf "\t"}; if (i==NF) {printf "\n"} else {printf "\t"}}; print $0 } else {print $0}}' | less -S

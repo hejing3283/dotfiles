@@ -1,0 +1,44 @@
+#!/ifs/home/c2b2/ac_lab/jh3283/tools/python/Python-2.7.5/python
+#J.HE
+#Desp: replacement of shell script < grep -wf idA.txt snp.mat.anno > since it is TOO SLOW!!
+#	python only need several SECONDS!!!
+#input: 1. <ID file: one each raw> 
+#       2. < annotated ID mat file: first column is ID> 
+#output: 2. < snp mat file of te given snp> 
+
+
+import os,sys,getopt
+import re
+argv = sys.argv[1:]
+usage = 'grepf2f inputfile targetfile outputfile'
+example = ''
+
+inputID = argv[0]
+inputMat = argv[1]
+output = argv[2]
+
+if len(argv) == 4:
+    ptn = argv[3]
+else:
+    ptn = None
+
+idA = []
+with open(inputID) as fhID:
+  for line in fhID.readlines():
+    idA.append(line.strip())
+	
+fhout  = open(output,'w') 
+cntOut = 0 
+with open(inputMat) as fhMat:
+    line = fhMat.readline()
+    while line:
+        [key, val] = line.split(ptn,1)
+        for eleidA in idA:
+            if eleidA == key:
+                fhout.write(line)
+                cntOut = cntOut + 1
+        line = fhMat.readline()
+   
+print "output idA records: \t" + str(cntOut)
+print "#-----END----"
+

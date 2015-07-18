@@ -1,0 +1,39 @@
+alias rdf='readlink -f'
+alias ltt='ls -latr|tail'
+alias amlx='cd ~/SCRATCH/projAML/WXS/'
+alias pan='cd ~/SCRATCH/projPanCancer/'
+alias ll='ls -alth'
+alias scratch='cd /ifs/scratch/c2b2/ys_lab/jh3283/'
+alias net='cd /ifs/scratch/c2b2/ys_lab/jh3283/net/'
+alias data='cd /ifs/data/c2b2/ys_lab/jh3283/'
+alias wgs='cd /ifs/scratch/c2b2/ngs_lab/ngs/Projects/WG-seq/120309_ANDREA_GABR'
+alias scripts='cd /ifs/data/c2b2/ngs_lab/ngs/code/NGS/WGS/'
+alias ref='cd /ifs/data/c2b2/ngs_lab/ngs/resources/bwa_samtools_gatk_DB/'
+alias ac16='/ifs/scratch/c2b2/ngs_lab/ngs/Projects/RNA-seq/120405_ANDREA_GABRI'
+alias grep='grep -i --color'
+#alias matlab='/nfs/apps/matlab/current/bin/matlab -singleCompThread'
+#alias matlabnod='matlab -nodisplay'
+alias more=less
+alias less='less -S'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias xsh='sh -X'
+alias ls='"ls" --color=tty -F'
+alias myqsum='qsum | "grep" "$USER\|int\|--\|total"'
+alias displayOffice='export DISPLAY=156.145.235.115:0.0'
+alias tawk="awk -F'\t' -v OFS='\t'"
+alias qrsh="qrsh -m a -M $USER@c2b2.columbia.edu"
+alias acrna='cd /ifs/scratch/c2b2/ngs_lab/ngs/Projects/RNA-seq/120405_ANDR    EA_GABRIELLE_4_HUMAN_RNA_100M_PE_HISEQ/120509_SN828_0132_AC0J91ACXX/fastq/ human_cufflinks';
+alias compmethod='cd /ifs/scratch/c2b2/rr_lab/akl2140/projCompMethods/';
+alias compgenom='cd /ifs/scratch/c2b2/ac_lab/jh3283/school/compGenomic/';
+alias qst='qstat -u jh3283';
+alias imac='echo "jh3283@156.145.28.235"'
+alias macpro='echo "jh3283@10.124.21.18'
+alias viz='rowcount|colcount|colorizer'
+alias lss='less -S'
+alias vi='vim'
+alias qst='qstat'
+alias md='mkdir'
+alias compg='cd ~/Dropbox/compGenomic/projCompGenomic/'
+alias subluser='cd ~/Library/Application Support/Sublime Text 2/Packages/User/'
+alias subluser='cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/'

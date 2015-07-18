@@ -1,0 +1,20 @@
+alias ll='ls -alth'
+alias grep='grep -i --color'
+alias more=less
+alias less='less -S'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias xsh='sh -X'
+#alias ls='"ls" --color=tty -F'
+alias myqsum='qsum | "grep" "$USER\|int\|--\|total"'
+alias displayOffice='export DISPLAY=156.145.235.115:0.0'
+alias tawk="awk -F'\t' -v OFS='\t'"
+alias qrsh="qrsh -m a -M $USER@c2b2.columbia.edu"
+alias qst='qstat -u jh3283'
+alias macpro='echo "jh3283@10.124.21.18"'
+alias viz='rowcount|colcount|colorizer';
+alias lss='less -S';
+alias vi='vim';
+alias qst='qstat';
+alias md='mkdir';
+alias rdm='readlink -m'

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+awk '{print $0"\t\033[1;34m"NR"\033[0m"}'

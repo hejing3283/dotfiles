@@ -1,0 +1,31 @@
+echo "    **     ****     **       ******    *******  *******     *******  "    
+echo " /**/**   **/**    ****     **////**  /**////**/**////**   **/////** "
+echo " /**//** ** /**   **//**   **    //   /**   /**/**   /**  **     //**"
+echo " /** //***  /**  **  //** /**         /******* /*******  /**      /**"
+echo " /**  //*   /** **********/**         /**////  /**///**  /**      /**"
+echo " /**   /    /**/**//////**//**    **  /**      /**  //** //**     ** "
+echo " /**        /**/**     /** //******   /**      /**   //** //*******  "
+echo " //         // //      //   //////    //       //     //   ///////   "
+
+
+
+alias wimh='subl ~/Dropbox/wimh.txt'
+alias db='cd /Users/jh3283/Dropbox/'
+alias rosalind='cd /Users/jh3283/Dropbox/rosalind'
+alias w4761='cd /Users/jh3283/Dropbox/W4761'
+alias w4002='cd /Users/jh3283/Dropbox/W4002'
+
+alias doc='cd /Users/jh3283/Documents/'
+alias dl='cd /Users/jh3283/Downloads/'
+alias lab='ssh c2b2'
+alias labv='ssh -Y jh3283@login.c2b2.columbia.edu'
+alias ta1='ssh -Y student02@login.c2b2.columbia.edu'
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+PATH="/usr/bin/R:${PATH}"
+export PATH
+
+SCRIPTS=/Users/jh3283/Dropbox/scripts/
+export SCRIPTS
+
+MKL_NUM_THREADS=1
+export MKL_NUM_THREADS
